@@ -1,6 +1,13 @@
 # Hidden files
 .DS_store
 
+# Exception for this template
+poetry.lock
+
+# Credentials
+credentials
+credentials.tar
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -20,6 +27,11 @@ nosetests.xml
 coverage.xml
 *.cover
 .hypothesis/
+
+
+# Ignore sensitive data
+*.csv
+*.xlsx
 
 # Sphinx documentation
 docs/_build/
