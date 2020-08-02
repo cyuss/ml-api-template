@@ -1,0 +1,23 @@
+credentials*
+.git
+.gitignore
+Dockerfile
+.DS_Store
+
+# ignore jupyter notebooks
+.ipynb_checkpoints/*
+/notebooks/*
+
+# ignore generated files
+**/*.pyc
+**/__pycache__/
+
+# ignore data files
+**/*.csv
+**/*.xlsx
+**/*.numbers
+**/*.tsv
+*.md
+!README*.md
+/docs/*
+mkdocs.yml
