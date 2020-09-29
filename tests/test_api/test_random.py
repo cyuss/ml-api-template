@@ -2,7 +2,7 @@
 
 import subprocess
 
-from app.core import config
+from app.core import settings
 
 
 def test_version(test_client):
@@ -11,4 +11,4 @@ def test_version(test_client):
 	out = out.decode("utf-8").rstrip()
 	poetry_version = out.split(' ')[1]
 
-	assert config.APP_VERSION == poetry_version
+	assert settings.APP_VERSION == poetry_version
