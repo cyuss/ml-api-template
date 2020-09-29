@@ -5,6 +5,6 @@ from starlette.requests import Request
 
 router = APIRouter()
 
-@router.get("/users/", tags=["users"])
-async def read_users():
-    return [{"username": "Foo"}, {"username": "Bar"}]
+@router.get("/hello", tags=["users"])
+async def hello():
+    return {"message": "hello world"}

@@ -6,11 +6,13 @@ version = 0.1.0
 port = 8000
 
 start:
-	poetry run uvicorn app.main:app
+	poetry run uvicorn app.main:app --reload --workers 2
 test:
 	poetry run pytest
 coverage:
 	poetry run pytest --cov=./app
+reqs:
+	poetry export --without-hashes -f requirements.txt -o requirements.txt
 build_docker:
 	docker image build -t $(docker_image_name):$(version) .
 run_docker:

@@ -8,7 +8,7 @@ from starlette.testclient import TestClient
 from app.main import get_app
 
 
-@pytest.fixture()
+@pytest.fixture(scope="session")
 def test_client():
     app = get_app()
     with TestClient(app) as test_client:
