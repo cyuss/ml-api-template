@@ -14,7 +14,7 @@ ENV	POETRY_NO_INTERACTION=1
 # install poetry
 RUN pip install poetry
 
-COPY poetry.lock pyproject.toml ./
+COPY pyproject.toml ./
 RUN poetry install --no-dev
 
 COPY ./app ./app
