@@ -18,6 +18,6 @@ COPY pyproject.toml ./
 RUN poetry install --no-dev
 
 COPY ./app ./app
-EXPOSE 8000
+EXPOSE 5000
 
-CMD poetry run uvicorn app.main:app --host 0.0.0.0 --port 8000
+CMD poetry run uvicorn app.main:app --host 0.0.0.0 --port 5000

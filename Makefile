@@ -3,7 +3,7 @@
 docker_image_name = "template"
 docker_container_name = "api_template"
 version = 0.1.0
-port = 8000
+port = 5000
 
 start:
 	poetry run uvicorn app.main:app --reload --workers 2
